@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#2A2A2A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Summary Section (Always Visible) -->
+        <LinearLayout
+            android:id="@+id/summaryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/timestampTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Time: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true" />
+
+            <ImageView
+                android:id="@+id/expandArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/arrow_down_float"
+                android:tint="#FFFFFF"
+                tools:ignore="UseAppTint" />
+        </LinearLayout>
+
+        <!-- Details Section (Expandable/Collapsible) -->
+        <LinearLayout
+            android:id="@+id/detailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <!-- RGB -->
+            <TextView
+                android:id="@+id/colorInfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RGB: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Hex -->
+            <TextView
+                android:id="@+id/hexTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hex: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Munsell -->
+            <TextView
+                android:id="@+id/munsellTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Munsell Notation: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Position -->
+            <TextView
+                android:id="@+id/positionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Position: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- Image URL -->
+            <TextView
+                android:id="@+id/urlTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image URL: "
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Action Buttons (Copy, Share, Delete) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <!-- Copy Button -->
+                <ImageView
+                    android:id="@+id/copyButton"
+                    android:layout_width="24dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_copy"
+                    android:tint="#FFFFFF"
+                    android:contentDescription="Copy record"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="UseAppTint" />
+
+                <!-- Share Button -->
+                <ImageView
+                    android:id="@+id/shareButton"
+                    android:layout_width="24dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_share"
+                    android:tint="#FFFFFF"
+                    android:contentDescription="Share record"
+                    android:layout_marginEnd="16dp"
+                    tools:ignore="UseAppTint" />
+
+                <!-- Delete Button -->
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#F44336"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
