@@ -11,6 +11,6 @@ import retrofit2.http.Part;
 public interface ImgurService {
     @Multipart
     @POST("3/image")
-    @Headers("Authorization: Client-ID 87679ef011a8b28") // Replace YOUR_CLIENT_ID with your actual Imgur Client ID
+    @Headers("Authorization: Client-ID ****************") // Replace YOUR_CLIENT_ID with your actual Imgur Client ID
     Call<ResponseBody> uploadImage(@Part MultipartBody.Part image);
 }
